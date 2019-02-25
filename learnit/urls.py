@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import HomeView, AboutView, CourseDetailView, CourseView
+from app.views import HomeView, AboutView, CourseDetailView, CourseView, ElementView
 
 
 
@@ -27,6 +27,7 @@ urlpatterns = [
     path('about/',AboutView.as_view(), name = 'about-us'),
     path('coursedetail/',CourseDetailView.as_view(), name = 'course-details'),
     path('course/',CourseView.as_view(), name = 'courses'),
+    path('elements/',ElementView.as_view(), name = 'elements'),
     path('admin/', admin.site.urls),
 ]
 

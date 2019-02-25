@@ -11,3 +11,6 @@ class CourseDetailView(TemplateView):
 
 class CourseView(TemplateView):
     template_name = 'app/courses.html'
+
+class ElementView(TemplateView):
+    template_name = 'app/elements.html'
