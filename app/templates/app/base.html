@@ -54,7 +54,7 @@
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'about-us' %}">About</a></li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
 									<ul class="dropdown-menu">
@@ -83,6 +83,7 @@
             </div>
         </header>
         <!--================Header Menu Area =================-->
+
         {% block body %}
         {% endblock %}
     <!--================ start footer Area  =================-->
