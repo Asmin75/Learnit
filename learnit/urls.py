@@ -15,9 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import HomeView, AboutView, CourseDetailView, CourseView, ElementView
-
-
+from app.views import HomeView, AboutView, CourseDetailView, CourseView, ElementView, ContactView
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -28,6 +26,7 @@ urlpatterns = [
     path('coursedetail/',CourseDetailView.as_view(), name = 'course-details'),
     path('course/',CourseView.as_view(), name = 'courses'),
     path('elements/',ElementView.as_view(), name = 'elements'),
+    path('contact/',ContactView.as_view(), name = 'contact'),
     path('admin/', admin.site.urls),
 ]
 
