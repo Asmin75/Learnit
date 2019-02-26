@@ -53,19 +53,20 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-								<li class="nav-item"><a class="nav-link" href="{% url 'about-us' %}">About</a></li>
+
+								<li class="nav-item {% if active == 'home' %} active {% endif %}"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+								<li class="nav-item {% if active == 'about-us' %} active {% endif %}"><a class="nav-link" href="{% url 'about-us' %}">About</a></li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="{% url 'courses' %}">Courses</a>
-										<li class="nav-item"><a class="nav-link" href="{% url 'course-details' %}">Course Details</a></li>
+										<li class="nav-item {% if active == 'courses' %} active {% endif %}"><a class="nav-link" href="{% url 'courses' %}">Courses</a>
+										<li class="nav-item {% if active == 'course-detail' %} active {% endif %}"><a class="nav-link" href="{% url 'course-details' %}">Course Details</a></li>
 									</ul>
 								</li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="{% url 'elements' %}">Elements</a></li>
+										<li class="nav-item {% if active == 'elements' %} active {% endif %}"><a class="nav-link" href="{% url 'elements' %}">Elements</a></li>
 									</ul>
 								</li>
 								<!--<li class="nav-item submenu dropdown">-->
@@ -75,7 +76,7 @@
 										<!--<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>-->
 									<!--</ul>-->
 								<!--</li>-->
-								<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+								<li class="nav-item {% if active == 'contact' %} active {% endif %}"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
 							</ul>
 						</div>
 					</div>
