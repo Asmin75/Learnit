@@ -1,4 +1,5 @@
 from django.views.generic.base import TemplateView
+from .models import Course
 
 class HomeView(TemplateView):
     template_name = 'app/index.html'
@@ -6,6 +7,9 @@ class HomeView(TemplateView):
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         context['active'] = 'home'
+
+        course = Course.objects.all()
+        context['course'] = course
 
         return context
 

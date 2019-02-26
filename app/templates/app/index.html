@@ -79,79 +79,100 @@
         			<h2>Popular Free Courses</h2>
         			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
         		</div>
-        		<div class="row courses_inner">
+        		<div class="row course_inner">
         			<div class="col-lg-9">
-						<div class="grid_inner">
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-1.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
+						<div class="row course_inner">
+
+							{% for c in course %}
+							<div class="col-lg-3 col-sm-6">
+								<div class="course_item">
+									<div class ="course_image">
+										<img class="img-fluid" src="{{ c.image.url }}" alt="">
+
+									</div>
+									<div class="course_title">
+										<h4>{{c.title}}</h4>
+										<p>{{c.course_description}}</p>
 									</div>
 								</div>
+
 							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-2.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-4.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-5.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-        			</div>
-        			<div class="col-lg-3">
-        				<div class="course_item">
-							<img src="{% static 'img/courses/course-3.jpg' %}" alt="">
-							<div class="hover_text">
-								<a class="cat" href="#">Free</a>
-								<a href="#"><h4>Japanease Language Class</h4></a>
-								<ul class="list">
-									<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-									<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-									<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-								</ul>
-							</div>
+							{% endfor %}
+
+
+
+
+
+							<!--<div class="grid_item wd55">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-1.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="grid_item wd44">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-2.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="grid_item wd44">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-4.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="grid_item wd55">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-5.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+        			<!--</div>-->
+        			<!--<div class="col-lg-3">-->
+        				<!--<div class="course_item">-->
+							<!--<img src="{% static 'img/courses/course-3.jpg' %}" alt="">-->
+							<!--<div class="hover_text">-->
+								<!--<a class="cat" href="#">Free</a>-->
+								<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+								<!--<ul class="list">-->
+									<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+								<!--</ul>-->
+							<!--</div>-->
 						</div>
         			</div>
         		</div>
@@ -168,7 +189,22 @@
         		</div>
         		<div class="row team_inner">
         			<div class="col-lg-3 col-sm-6">
+						{% for t in team %}
+							<div class="col-lg-3 col-sm-6">
+								<div class="team_item">
+									<div class ="team_image">
+										<img class="img-fluid" src="{{ t.image.url }}" alt="">
+
+									</div>
+									<div class="team_name">
+										<h4>{{t.name}}</h4>
+										<p>{{t.position}}</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
         				<div class="team_item">
+
         					<div class="team_img">
         						<img class="rounded-circle" src="{% static 'img/team/team-1.jpg' %}" alt="">
         						<div class="hover">
