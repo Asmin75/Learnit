@@ -1,5 +1,6 @@
 from django.views.generic.base import TemplateView
-from .models import Course
+from .models import Course, Team
+
 
 class HomeView(TemplateView):
     template_name = 'app/index.html'
@@ -10,6 +11,9 @@ class HomeView(TemplateView):
 
         course = Course.objects.all()
         context['course'] = course
+
+        team = Team.objects.all()
+        context['team'] = team
 
         return context
 
