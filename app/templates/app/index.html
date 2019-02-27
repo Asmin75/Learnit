@@ -85,9 +85,9 @@
         			<div class="col-lg-9">
 
 						<div class="grid_inner">
-
+                            {% for c in course|slice:":4:3" %}
 							<div class="grid_item wd55">
-                                {% for c in course|slice:":4:3" %}
+
 								<div class="courses_item">
 									<img src="{{c.image.url}}" alt="">
 									<div class="hover_text">
@@ -100,8 +100,9 @@
 										</ul>
 									</div>
 								</div>
-								{% endfor %}
+
 							</div>
+							{% endfor %}
 
                             {% for c in course|slice:"1:3:3" %}
 							<div class="grid_item wd44">
