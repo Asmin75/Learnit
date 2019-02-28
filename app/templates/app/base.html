@@ -57,9 +57,11 @@
 								<li class="nav-item {% if active == 'home' %} active {% endif %}"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
 								<li class="nav-item {% if active == 'about-us' %} active {% endif %}"><a class="nav-link" href="{% url 'about-us' %}">About</a></li>
 								<li class="nav-item submenu dropdown {% if active == 'courses' %} active {% endif %}">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Career</a>
 									<ul class="dropdown-menu">
 										<li class="nav-item {% if active == 'courses' %} active {% endif %}"><a class="nav-link" href="{% url 'courses' %}">Courses</a>
+                                        <li class="nav-item {% if active == 'courses' %} active {% endif %}"><a class="nav-link" href="{% url 'courses' %}">Running</a>
+                                        <li class="nav-item {% if active == 'courses' %} active {% endif %}"><a class="nav-link" href="{% url 'courses' %}">Upcoming</a>
 									</ul>
 								</li>
 								<li class="nav-item submenu dropdown {% if active == 'elements' %} active {% endif %}">
