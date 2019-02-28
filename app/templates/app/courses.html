@@ -38,7 +38,7 @@
 									<img src="{{c.image.url}}" alt="">
 									<div class="hover_text">
 										<a class="cat" href="#">Apply</a>
-										<a href="{% url 'course-details' %}"><h4>{{c.title}}</h4></a>
+										<a href="{% url 'app:course_details' c.id %}"><h4>{{c.title}}</h4></a>
 										<ul class="list">
 											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
 											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>

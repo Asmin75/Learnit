@@ -1,4 +1,5 @@
 from django.views.generic.base import TemplateView
+from django.views.generic.detail import DetailView
 from .models import Course, Team
 
 
@@ -26,8 +27,9 @@ class AboutView(TemplateView):
 
         return context
 
-class CourseDetailView(TemplateView):
+class CourseDetailView(DetailView):
     template_name = 'app/course-details.html'
+    model = Course
 
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
