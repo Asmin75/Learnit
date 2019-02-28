@@ -72,7 +72,7 @@
         </section>
         <!--================End Finance Area =================-->
 
-         <!--================Courses Area =================-->
+          <!--================Courses Area =================-->
         <section class="courses_area p_120">
         	<div class="container">
         		<div class="main_title">
@@ -85,13 +85,13 @@
         			<div class="col-lg-9">
 
 						<div class="grid_inner">
-                            {% for c in course|slice:":4:3" %}
+                            {% for c in course %}
 							<div class="grid_item wd55">
 
 								<div class="courses_item">
 									<img src="{{c.image.url}}" alt="">
 									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
+										<a class="cat" href="#">Apply</a>
 										<a href="#"><h4>{{c.title}}</h4></a>
 										<ul class="list">
 											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
@@ -104,25 +104,25 @@
 							</div>
 							{% endfor %}
 
-                            {% for c in course|slice:"1:3:3" %}
-							<div class="grid_item wd44">
+                            <!--{% for c in courses|slice:"1:3:3" %}-->
+							<!--<div class="grid_item wd44">-->
 
 
-								<div class="courses_item">
-									<img src="{{c.image.url}}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>{{c.title}}</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
+								<!--<div class="courses_item">-->
+									<!--<img src="{{c.image.url}}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Apply</a>-->
+										<!--<a href="#"><h4>{{c.title}}</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
 
-							</div>
-							{% endfor %}
+							<!--</div>-->
+							<!--{% endfor %}-->
 
 
 
@@ -157,29 +157,30 @@
 						</div>
         			</div>
 
-					{% for c in course|slice:"2::2" %}
-        			<div class="col-lg-3">
+					<!--{% for c in course|slice:"2::2" %}-->
+        			<!--<div class="col-lg-3">-->
 
-        				<div class="course_item">
-							<img src="{{c.image.url}}" alt="">
-							<div class="hover_text">
-								<a class="cat" href="#">Free</a>
-								<a href="#"><h4>{{c.title}}</h4></a>
-								<ul class="list">
-									<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-									<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-									<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-								</ul>
-							</div>
-						</div>
+        				<!--<div class="course_item">-->
+							<!--<img src="{{c.image.url}}" alt="">-->
+							<!--<div class="hover_text">-->
+								<!--<a class="cat" href="#">Apply</a>-->
+								<!--<a href="#"><h4>{{c.title}}</h4></a>-->
+								<!--<ul class="list">-->
+									<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+								<!--</ul>-->
+							<!--</div>-->
+						<!--</div>-->
 
-        			</div>
-                    {% endfor %}
+        			<!--</div>-->
+                    <!--{% endfor %}-->
         		</div>
 
         	</div>
         </section>
         <!--================End Courses Area =================-->
+
 
         <!--================Team Area =================-->
         <section class="team_area p_120">
