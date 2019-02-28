@@ -42,6 +42,9 @@ class CourseView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['active'] = 'courses'
 
+        courses = Course.objects.all()
+        context['courses'] = courses
+
         return context
 
 class ElementView(TemplateView):

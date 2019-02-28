@@ -1,7 +1,7 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block body %}
-<!--================Home Banner Area =================-->
+        <!--================Home Banner Area =================-->
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
@@ -18,22 +18,27 @@
         </section>
         <!--================End Home Banner Area =================-->
 
-        <!--================Courses Area =================-->
+         <!--================Courses Area =================-->
         <section class="courses_area p_120">
         	<div class="container">
         		<div class="main_title">
         			<h2>Popular Free Courses</h2>
         			<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
         		</div>
+
         		<div class="row courses_inner">
+
         			<div class="col-lg-9">
+
 						<div class="grid_inner">
+                            {% for c in courses %}
 							<div class="grid_item wd55">
+
 								<div class="courses_item">
-									<img src="{% static 'img/courses/course-1.jpg' %}" alt="">
+									<img src="{{c.image.url}}" alt="">
 									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
+										<a class="cat" href="#">Apply</a>
+										<a href="#"><h4>{{c.title}}</h4></a>
 										<ul class="list">
 											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
 											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
@@ -41,69 +46,87 @@
 										</ul>
 									</div>
 								</div>
+
 							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-2.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd44">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-4.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="grid_item wd55">
-								<div class="courses_item">
-									<img src="{% static 'img/courses/course-5.jpg' %}" alt="">
-									<div class="hover_text">
-										<a class="cat" href="#">Free</a>
-										<a href="#"><h4>Japanease Language Class</h4></a>
-										<ul class="list">
-											<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-											<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-											<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							{% endfor %}
+
+                            <!--{% for c in courses|slice:"1:3:3" %}-->
+							<!--<div class="grid_item wd44">-->
+
+
+								<!--<div class="courses_item">-->
+									<!--<img src="{{c.image.url}}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Apply</a>-->
+										<!--<a href="#"><h4>{{c.title}}</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+
+							<!--</div>-->
+							<!--{% endfor %}-->
+
+
+
+							<!--<div class="grid_item wd44">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-4.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="grid_item wd55">-->
+								<!--<div class="courses_item">-->
+									<!--<img src="{% static 'img/courses/course-5.jpg' %}" alt="">-->
+									<!--<div class="hover_text">-->
+										<!--<a class="cat" href="#">Free</a>-->
+										<!--<a href="#"><h4>Japanease Language Class</h4></a>-->
+										<!--<ul class="list">-->
+											<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+											<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+										<!--</ul>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
 						</div>
         			</div>
-        			<div class="col-lg-3">
-        				<div class="course_item">
-							<img src="{% static 'img/courses/course-3.jpg' %}" alt="">
-							<div class="hover_text">
-								<a class="cat" href="#">Free</a>
-								<a href="#"><h4>Japanease Language Class</h4></a>
-								<ul class="list">
-									<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-									<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>
-									<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>
-								</ul>
-							</div>
-						</div>
-        			</div>
+
+					<!--{% for c in course|slice:"2::2" %}-->
+        			<!--<div class="col-lg-3">-->
+
+        				<!--<div class="course_item">-->
+							<!--<img src="{{c.image.url}}" alt="">-->
+							<!--<div class="hover_text">-->
+								<!--<a class="cat" href="#">Apply</a>-->
+								<!--<a href="#"><h4>{{c.title}}</h4></a>-->
+								<!--<ul class="list">-->
+									<!--<li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-bubble"></i> 35</a></li>-->
+									<!--<li><a href="#"><i class="lnr lnr-user"></i> T. Robert</a></li>-->
+								<!--</ul>-->
+							<!--</div>-->
+						<!--</div>-->
+
+        			<!--</div>-->
+                    <!--{% endfor %}-->
         		</div>
+
         	</div>
         </section>
         <!--================End Courses Area =================-->
+
 
         <!--================Pagkages Area =================-->
         <section class="packages_area p_120">
@@ -159,4 +182,5 @@
         	</div>
         </section>
         <!--================End Pagkages Area =================-->
+
 {% endblock %}
